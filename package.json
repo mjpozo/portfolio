@@ -1,0 +1,32 @@
+{
+  "name": "new_portfolio",
+  "version": "1.0.0",
+  "description": "new portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjpozo/portfolio.git"
+  },
+  "author": "Maria JOse Pozo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjpozo/portfolio/issues"
+  },
+  "homepage": "https://github.com/mjpozo/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1"
+  }
+}
