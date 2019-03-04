@@ -1,0 +1,35 @@
+
+/*  HEADER  */
+.header {
+	@include pictBg(url(../../dist/img/bg_math.jpg));
+	height: 100vh;
+
+	nav {
+		.navbar-brand {
+			color: white;
+		}
+
+		#navbarNavAltMarkup {
+			a {
+				color: white;
+			}
+		}
+	}
+
+	.cont-opacity {
+		background: rgba(0,0,0,0.7);
+		height: 100vh;
+
+		.text-presentation {
+			height: calc(100% - 56px);
+			display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+
+		    #name, #appointment {
+		    	color: white;
+		    }
+		}
+	}
+}

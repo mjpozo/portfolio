@@ -1,0 +1,6 @@
+@mixin pictBg($my-picture){
+	background: $my-picture;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
