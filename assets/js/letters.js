@@ -57,14 +57,14 @@ function animateLetters(array,length,animIn)
 	array = (animIn) ? shuffleArray(array) : array;
 	
 	// How long before refiring?
-	var timeout = (animIn) ? 3500 : 5000;
+	//var timeout = (animIn) ? 3500 : 5000;
 	
 	// Animate out or show replay button
-	setTimeout(function(){
+	/*setTimeout(function(){
 		if(!animIn)
 		{
 			// Animate out
-			//animateLetters(array,length,animIn);
+			animateLetters(array,length,animIn);
 		} else {
 			// Create replay button
 			//$("body").prepend('<button>Replay?</button>');
@@ -77,7 +77,7 @@ function animateLetters(array,length,animIn)
 				
 			});
 		}
-	},timeout);
+	},timeout);*/
 }
 
 // Randomize array element order in-place. Using Fisher-Yates shuffle algorithm.

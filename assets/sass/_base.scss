@@ -26,6 +26,10 @@
 		    flex-direction: column;
 		    justify-content: center;
 		    align-items: center;
+		    
+		    position: absolute;
+		    top: 56px;
+		    width: 100vw;
 
 		    #name, #appointment {
 		    	color: white;

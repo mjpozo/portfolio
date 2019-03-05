@@ -7,7 +7,7 @@ var watch = require('gulp-watch');
 var webserver = require('gulp-webserver');
 
 gulp.task('script',function(){
-	gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/bootstrap/dist/js/bootstrap.js','assets/js/main.js'])
+	gulp.src(['node_modules/jquery/dist/jquery.js','node_modules/bootstrap/dist/js/bootstrap.js','assets/js/*.js'])
 	.pipe(concat('script.js'))
 	.pipe(gulp.dest('dist/js/'));
 });
