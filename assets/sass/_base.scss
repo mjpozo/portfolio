@@ -4,7 +4,43 @@ body {
 	font-size: 120%;
 }
 
+
+/*  NAV SCROLL  */
 .nav-scroll {
 	transition: 0.9s;
 	background: black;
+}
+
+
+/*  OVERLAY  */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	transition: .5s ease;
+	background-color: transparent;
+	border-radius: 10px;
+	.fa {
+		font-size: 150%;
+	}
+}
+.proyect:hover .overlay {
+	background-color: rgba(80, 24, 81, .7);
+}
+.proyect:hover .overlay .text {
+	height: 100%;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 10px;
+	position: absolute;
+	top: 0;
+	left: 2%;
 }
