@@ -1,39 +1,10 @@
 
-/*  HEADER  */
-.header {
-	@include pictBg(url(../../dist/img/bg_math.jpg));
-	height: 100vh;
+body {
+	font-family: 'Patrick Hand', cursive;
+	font-size: 120%;
+}
 
-	nav {
-		.navbar-brand {
-			color: white;
-		}
-
-		#navbarNavAltMarkup {
-			a {
-				color: white;
-			}
-		}
-	}
-
-	.cont-opacity {
-		background: rgba(0,0,0,0.7);
-		height: 100vh;
-
-		.text-presentation {
-			height: calc(100% - 56px);
-			display: flex;
-		    flex-direction: column;
-		    justify-content: center;
-		    align-items: center;
-		    
-		    position: absolute;
-		    top: 56px;
-		    width: 100vw;
-
-		    #name, #appointment {
-		    	color: white;
-		    }
-		}
-	}
+.nav-scroll {
+	transition: 0.9s;
+	background: black;
 }

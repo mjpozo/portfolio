@@ -1,0 +1,40 @@
+
+#about_me {
+	padding-top: 56px;
+	.contenedor {
+		width: 700px;
+		height: 525px;
+		margin: auto;
+
+		/*@include pictBg(url(../../dist/img/bg_about.jpg));
+
+		.cont-opacity {	
+			height: 100%;
+			background: rgba(247,247,247,0.8);
+			
+			img, .info_personal {
+				display: inline-block;
+				vertical-align: middle !important;
+			}
+			img {
+				width: 300px;
+			}
+			.info_personal {
+				padding: 10px;
+				font-size: 120%;
+			}
+		}*/
+
+		#carouseFadeAbout {
+			.carousel-item img {
+				height: 525px;
+			}
+		}
+	}
+
+	@media (max-width: 950px){
+		.contenedor {
+			width: 75%;
+		}
+	}
+}

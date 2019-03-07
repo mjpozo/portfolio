@@ -1,0 +1,42 @@
+
+.header {
+	@include pictBg(url(../../dist/img/bg_math.jpg));
+	heigth: 100%;
+
+	nav {
+		.navbar-brand {
+			color: white;
+		}
+
+		#navbarNavAltMarkup {
+			a {
+				color: white;
+			}
+		}
+
+		.navbar-nav {
+			font-size: 130%;
+		}
+	}
+
+	.cont-opacity {
+		background: rgba(0,0,0,0.7);
+		height: 100vh;
+
+		.text-presentation {
+			height: calc(100% - 56px);
+			/*display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;*/
+		    
+		    position: absolute;
+		    top: 56px;
+		    width: 100%;
+
+		    #name, #appointment {
+		    	color: white;
+		    }
+		}
+	}
+}
