@@ -1,0 +1,37 @@
+
+#portfolio {
+	padding-top: 56px;
+	.contenedor {
+		width: 80%;
+		padding: 50px;
+		margin: auto;
+
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+
+			.proyect {
+				height: 250px;
+			}
+		}
+
+		#labcar {
+			@include pictBg(url(../../dist/img/portfolio/labcar.jpg));
+		}
+		#portfolio_sass {
+			@include pictBg(url(../../dist/img/portfolio/portfoliosass.jpg));
+		}
+		#translab {
+			@include pictBg(url(../../dist/img/portfolio/translab.jpg));
+		}
+		#trello {
+			@include pictBg(url(../../dist/img/portfolio/trello.png));
+		}
+		#save_the_koala {
+			@include pictBg(url(../../dist/img/portfolio/savethekoala2.jpg));
+		}
+		#lab_studio {
+			@include pictBg(url(../../dist/img/portfolio/labstudio.jpg));
+		}
+	}
+}
