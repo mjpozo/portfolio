@@ -37,4 +37,11 @@
 			width: 75%;
 		}
 	}
+
+
+	@media (max-width: 576px){
+		.contenedor {
+			width: 100%;
+		}
+	}
 }

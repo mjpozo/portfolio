@@ -9,29 +9,71 @@
 		.row {
 			margin-left: 0;
 			margin-right: 0;
+		}
+	}
+}
 
-			.proyect {
-				height: 250px;
+#labcar, #imgmod_labcar {
+	@include pictBg(url(../../dist/img/portfolio/labcar.jpg));
+}
+#portfolio_sass, #imgmod_portfolio_sass {
+	@include pictBg(url(../../dist/img/portfolio/portfoliosass.jpg));
+}
+#translab, #imgmod_translab {
+	@include pictBg(url(../../dist/img/portfolio/translab.jpg));
+}
+#trello, #imgmod_trello {
+	@include pictBg(url(../../dist/img/portfolio/trello.png));
+}
+#save_the_koala, #imgmod_save_the_koala {
+	@include pictBg(url(../../dist/img/portfolio/savethekoala2.jpg));
+}
+#lab_studio, #imgmod_lab_studio {
+	@include pictBg(url(../../dist/img/portfolio/labstudio.jpg));
+}
+
+.contenedor-modal {
+	.imgmod {
+		height: 100%;
+		@media (max-width: 768px){
+			height: 200px;
+		}
+	}
+	.cont-btn {
+		button {
+			margin: 0 15px;
+			width: 45px;
+			height: 45px;
+			background: rgb(80, 24, 81);
+			border: 1px solid rgb(80, 24, 81);
+			border-radius: 50%;
+			a {
+				color: white;
 			}
 		}
+		button:hover {
+			transition: .6s ease;
+			background: white;
+			a {
+				color: rgb(80, 24, 81);
+			}
+		}
+	}
+}
 
-		#labcar {
-			@include pictBg(url(../../dist/img/portfolio/labcar.jpg));
+@media (max-width: 768px){
+	.contenedor-modal {
+		.imgmod {
+			height: 200px;
 		}
-		#portfolio_sass {
-			@include pictBg(url(../../dist/img/portfolio/portfoliosass.jpg));
-		}
-		#translab {
-			@include pictBg(url(../../dist/img/portfolio/translab.jpg));
-		}
-		#trello {
-			@include pictBg(url(../../dist/img/portfolio/trello.png));
-		}
-		#save_the_koala {
-			@include pictBg(url(../../dist/img/portfolio/savethekoala2.jpg));
-		}
-		#lab_studio {
-			@include pictBg(url(../../dist/img/portfolio/labstudio.jpg));
+	}
+}
+
+@media (max-width: 576px){
+	#portfolio {
+		.contenedor {
+			width: 90%;
+			padding: 50px 30px;
 		}
 	}
 }

@@ -14799,6 +14799,14 @@ return jQuery;
 }));
 //# sourceMappingURL=bootstrap.js.map
 
+var proyect = [{"id":"trello","title":"Mi Trello","img":"trello.png","description":"Mi Trello es un proyecto orientado a replicar de la forma más exacta posible, con las herramientas aprendidas hasta el momento, la famosa plataforma de organización de proyectos Trello, todo esto haciendo uso de DOM.","code":"https://github.com/mjpozo/trello-laboratoria","url":"https://mjpozo.github.io/trello-laboratoria/"},{"id":"save_the_koala","title":"Save the Koala","img":"savethekoala2.jpg","description":"Save the Koala es una maqueta construída en html y CSS, en la cual se hizo uso libre del framework Bootstrap. Se utilizan tanto sus componentes como sus elementos y eventos en Javascript","code":"https://github.com/mjpozo/save-the-koala-vol2","url":"https://mjpozo.github.io/save-the-koala-vol2/"},{"id":"labcar","title":"Labcar","img":"labcar.jpg","description":"Labcar es un proyecto que imita el estilo de Lyft. En este proyecto se hace uso de la Geolocalización proporcionada por la API de Google, recurriendo a través de esta a herramientas como el mapa, la ruta trazada entre dos puntos y la distancia entre ellos, tiempo de viaje, etc.","code":"https://github.com/mjpozo/labcar","url":"https://mjpozo.github.io/labcar/"},{"id":"translab","title":"Trans Lab","img":"translab.jpg","description":"En Translab se hace uso de la API de Transantiago, para poder rescatar información sobre tarjetas bip. Hecho en versión mobile first y utilizando Materialize como framework, Translab recurre a LocalStorage para el almacenamiento de datos y entrega información sobre el saldo de tarjeta y monto final una vez que se ha itulizado una determinada tarifa.","code":"https://github.com/mjpozo/trans-lab","url":"https://mjpozo.github.io/trans-lab/"},{"id":"portfolio_sass","title":"Portfolio Sass","img":"portfoliosass.jpg","description":"Portfolio-Sass es un proyecto que reproduce una página con formato de portafolio. Para esto se hace uso de Sass y de Materialize.","code":"https://github.com/mjpozo/portafolio-sass","url":"https://mjpozo.github.io/portafolio-sass/"},{"id":"lab_studio","title":"Lab Studio","img":"labstudio.jpg","description":"Portfolio-Sass es un proyecto que reproduce una página con formato de portafolio. Para esto se hace uso de Sass y de Materialize.","code":"https://github.com/mjpozo/lab-studio","url":"https://mjpozo.github.io/lab-studio/"}];
+
+/*https://mjpozo.github.io/trello-laboratoria/
+https://mjpozo.github.io/save-the-koala-vol2/
+https://mjpozo.github.io/labcar/
+https://mjpozo.github.io/trans-lab/
+https://mjpozo.github.io/portafolio-sass/*/
+
 /* Lettering.JS 0.6.1 by Dave Rupert  - http://daverupert.com */
 (function($){function injector(t,splitter,klass,after){var a=t.text().split(splitter),inject='';if(a.length){$(a).each(function(i,item){inject+='<span class="'+klass+(i+1)+'">'+item+'</span>'+after});t.empty().append(inject)}}var methods={init:function(){return this.each(function(){injector($(this),'','char','')})},words:function(){return this.each(function(){injector($(this),' ','word',' ')})},lines:function(){return this.each(function(){var r="eefec303079ad17405c889e092e105b0";injector($(this).children("br").replaceWith(r).end(),r,'line','')})}};$.fn.lettering=function(method){if(method&&methods[method]){return methods[method].apply(this,[].slice.call(arguments,1))}else if(method==='letters'||!method){return methods.init.apply(this,[].slice.call(arguments,0))}$.error('Method '+method+' does not exist on jQuery.lettering');return this}})(jQuery);
 $(function(){
@@ -14924,5 +14932,24 @@ $(document).ready(function(){
 
 	// ABOUT ME
 	$('.carousel').carousel();
+
+	//  OVERLAY PORTAFOLIO
+	proyect.forEach(function(element){
+		$("#" + element.id).append('<div class="overlay"><div class="text"><span class="title">' + element.title + '</span><ul><li><a  data-toggle="modal" href="#modal-' + element.id + '" id="desc-"' + element.id + '><i class="fa fa-file-text-o" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Descripción"></i></a></li><li><a href="' + element.code + '" target="_blank"><i class="fa fa-code" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Código"></i></a></li><li><a href="' + element.url + '" target="_blank"><i class="fa fa-github" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Visualización"></i></a></li></ul></div></div>');
+
+		$(".contenedor-modal").append('<div class="modal fade" id="modal-' + element.id + '" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true"><div class="modal-dialog  modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="modalLabel">' + element.title + '</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="row"><div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"><div class="imgmod" id="imgmod_' + element.id + '"></div></div><div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">' + element.description + '</div></div><div class="row"><div class="cont-btn" style="margin: 30px auto;"><button type="button" class="btn btn-primary"><a href="' + element.code + '" target="_blank"><i class="fa fa-code" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Código"></i></a></button><button type="button" class="btn btn-primary"><a href="' + element.url + '" target="_blank"><i class="fa fa-github" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Visualización"></i></a></button></div></div></div></div></div></div>');
+
+		//<img src="../../dist/img/portfolio/' + element.img + '" style="width: 100%;">
+		
+		/*$(".contenedor-modal").append('<div id="modal-' + element.id + '" class="modal"><div class="modal-content"><h4>' + element.title + '</h4><div class="row"><div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center"><img src="../../dist/img/portfolio/' + element.img + '" class="responsive-img"></div><div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"><p>' + element.description + '</p></div></div><div class="row"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><a href="' + element.code + '" class="waves-effect waves-light modal-close btn right" target="_blank"><i class="fa fa-code" aria-hidden="true"></i></a></div><div class="col-sm-6 col-md-6 col-lg-6 col-xl-6"><a href="' + element.url + '" class="waves-effect waves-light modal-close btn" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></div></div></div><div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a></div></div>');*/
+	});
+
+	
+	//  INICIALIZAR TOOLTIP
+  	$('[data-toggle="tooltip"]').tooltip();
+
+
+	//  INICIALIZAR MODAL
+	//$('.modal').modal();
 
 })
