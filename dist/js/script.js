@@ -14949,7 +14949,4 @@ $(document).ready(function(){
   	$('[data-toggle="tooltip"]').tooltip();
 
 
-	//  INICIALIZAR MODAL
-	//$('.modal').modal();
-
 })

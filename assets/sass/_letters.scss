@@ -2,7 +2,10 @@
 
 .text-presentation {
 	font: 150%/110% 'Sedgwick Ave', cursive;
-	@media (min-width: 650px){
+	@media (min-width: 500px){
+		font: 250%/120% 'Sedgwick Ave', cursive;
+	}
+	@media (min-width: 750px){
 		font: 400%/130% 'Sedgwick Ave', cursive;
 	}
 	

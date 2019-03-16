@@ -5,12 +5,20 @@
 
 	nav {
 		.navbar-brand {
-			color: white;
+			color: $color_white;
+			a:hover {
+				color: $hover_link_footer;
+				transition: .5s;
+			}
 		}
 
 		#navbarNavAltMarkup {
 			a {
-				color: white;
+				color: $color_white;
+			}
+			a:hover {
+				color: $hover_link_footer;
+				transition: .5s;
 			}
 		}
 
@@ -25,17 +33,13 @@
 
 		.text-presentation {
 			height: calc(100% - 56px);
-			/*display: flex;
-		    flex-direction: column;
-		    justify-content: center;
-		    align-items: center;*/
 		    
 		    position: absolute;
 		    top: 56px;
 		    width: 100%;
 
 		    #name, #appointment {
-		    	color: white;
+		    	color: $color_white;
 		    }
 		}
 	}
